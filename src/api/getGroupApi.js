@@ -11,6 +11,9 @@ const getGroupApi = {
     const response = await axios.get(`${PATH}/randomizing`);
     return response.data;
   },
+  post: async (name) => {
+    await axios.post(`${PATH}/add-member`, name);
+  },
 };
 
 export default getGroupApi;

@@ -3,3 +3,16 @@
   width: 960px;
   padding: 0 30px;
 }
+
+.add-button {
+  display: inline-block;
+  width: 110px;
+  padding: 10px 10px;
+}
+
+.add-input {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  position: relative;
+}

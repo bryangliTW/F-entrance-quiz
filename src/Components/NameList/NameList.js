@@ -8,10 +8,27 @@ class NameList extends Component {
     super();
     this.state = {
       people: [],
+      editMode: false,
     };
   }
 
   componentDidMount = async () => {
+    const people = await getGroupApi.getAll();
+    this.setState({ people });
+  };
+
+  addMember = () => {
+    this.setState({
+      editMode: true,
+    });
+  };
+
+  submitNew = async (event) => {
+    this.setState({
+      editMode: false,
+    });
+    const name = event.target.elements.name.value;
+    getGroupApi.post(name);
     const people = await getGroupApi.getAll();
     this.setState({ people });
   };
@@ -28,7 +45,18 @@ class NameList extends Component {
     return (
       <div className="list-names-block">
         <h2 className="list-title">学员列表</h2>
-        <section>{names}</section>
+        <section>
+          {names}
+          {this.state.editMode === false ? (
+            <button type="button" className="add-button" onClick={this.addMember}>
+              +添加学员
+            </button>
+          ) : (
+            <form onSubmit={this.submitNew}>
+              <input type="text" name="name" className="add-input" />
+            </form>
+          )}
+        </section>
       </div>
     );
   }
