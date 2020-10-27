@@ -13,7 +13,7 @@ class NameTag extends Component {
   render() {
     return (
       <div className="name-tag">
-        <span>
+        <span className="name-content">
           {this.state.id}. {this.state.name}
         </span>
       </div>

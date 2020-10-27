@@ -4,16 +4,25 @@ import './Groups.css';
 
 class Groups extends Component {
   render() {
-    return (
-      <div className="groups">
-        <section className="group-title-block">
-          <p>1组</p>
-        </section>
-        <section className="block-names">
-          <NameTag id="1" name="成吉思汗" />
-        </section>
-      </div>
-    );
+    const { groups } = this.props;
+    const displayGroup = [];
+    if (groups) {
+      groups.map((group) =>
+        displayGroup.push(
+          <div className="groups" key={group.id}>
+            <section className="group-title-block">
+              <p>{group.id + 1} 组</p>
+            </section>
+            <section className="block-names">
+              {group.group.map((person) => (
+                <NameTag id={person.id} name={person.name} key={person.id} />
+              ))}
+            </section>
+          </div>
+        )
+      );
+    }
+    return displayGroup;
   }
 }
 
