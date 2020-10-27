@@ -1,0 +1,18 @@
+.header-title {
+  text-align: left;
+}
+
+.randomize-students {
+  background-color: coral;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: none;
+}
+
+.page-header {
+  width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
