@@ -13,7 +13,6 @@
 **Details:**
 
 - \- Header 按照业务划分，应该属于分组列表，建议放在分组列表组件内
-- \- people 应该提取到 App 组件中，分组操作会引起这 3 个数据的变化
 - \- event.target.value 即可取到值
 - \- 需要等到 post name 成功后再去获取列表，不然会有 bug
 - \- 建议用 ES6 forEach
