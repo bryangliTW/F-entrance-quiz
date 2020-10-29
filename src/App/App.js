@@ -19,8 +19,10 @@ class App extends Component {
   render() {
     return (
       <div data-testid="app" className="App">
+        {/* TODO GTB-知识点: - Header按照业务划分，应该属于分组列表，建议放在分组列表组件内 */}
         <Header setGroup={this.setGroups} />
         <Groups groups={this.state.groups} />
+        {/* TODO GTB-工程实践: - 命名不合理 */}
         <NameList />
       </div>
     );

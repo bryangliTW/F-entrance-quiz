@@ -13,6 +13,7 @@ class Header extends Component {
       <div>
         <header className="page-header">
           <h2 className="header-title">分组列表</h2>
+          {/* TODO GTB-工程实践: - randomize-students和shuffle命名不够表意 */}
           <button className="randomize-students" type="button" onClick={this.shuffle}>
             分组学员
           </button>
