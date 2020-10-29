@@ -6,7 +6,6 @@ import './NameList.css';
 class NameList extends Component {
   constructor() {
     super();
-    // TODO GTB-知识点: - people应该提取到App组件中，分组操作会引起这3个数据的变化
     this.state = {
       people: [],
       editMode: false,
